@@ -91,7 +91,7 @@ This sensitive privilege allows a user to achieve user delegation through Kerber
 The *Protected Users* groups prevent privileged users to be delegated within the domain in order to avoid impersonation attack. However, a BloodHound enumeration revealed that no users were members of this group, which made it possible to impersonate any user in the domain, including the Domain Administrator (**`Administrator`**) account.
 ![image](/THM/Crocc_Crew/CrocCrew_images/douze.png)
 
-The `oakley/DC.COOCTUS.CORP` service (SPN) has been used to lead the Constrained Delegation attack, through the `impacket-getST` tool, which leveraged the **S4U2Self/S4U2Proxy** extended protocols to obtain a service ticket on behalf of the target user. The  **`Administrator`** user ****account has been delegated to the service through the following command:
+The `oakley/DC.COOCTUS.CORP` service (SPN) has been used to lead the Constrained Delegation attack, through the `impacket-getST` tool, which leveraged the **S4U2Self/S4U2Proxy** extended protocols to obtain a service ticket on behalf of the target user. The  **`Administrator`** user account has been delegated to the service through the following command:
 
 `impacket-getST COOCTUS.CORP/password-reset:<PASSWORD> -spn oakley/DC.COOCTUS.CORP -impersonate 'Administrator' -dc-ip <TARGET_IP>`
 
