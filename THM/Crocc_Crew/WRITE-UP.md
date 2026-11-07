@@ -121,7 +121,7 @@ Since WinRM is not enabled, Evil-WinRM couldn’t be used to achieve this techni
 
 ![image](/THM/Crocc_Crew/CrocCrew_images/17.png)
 
-Full privileges have been successfully granted over the Domain Controller machine.
+Full privileges have been granted over the Domain Controller machine.
 
 ![image](/THM/Crocc_Crew/CrocCrew_images/18.png)
 
